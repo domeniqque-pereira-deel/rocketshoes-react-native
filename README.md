@@ -18,7 +18,7 @@ Inicie a fake api, com `json-server`.
 
 Instale o `json-server` (instalação global: `yarn global add json-server` ou local `yarn add -D json-server`).
 
-Depois execute a api:
+Depois execute a api que consome o arquivo `server.json` na raiz do projeto:
 
 > json-server server.json -p 3333 -w
 
