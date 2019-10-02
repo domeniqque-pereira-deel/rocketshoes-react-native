@@ -4,6 +4,7 @@ import { Alert } from 'react-native';
 import api from '../../../services/api';
 import { addProductSuccess, updateProductAmountSuccess } from './actions';
 import { formatPrice } from '../../../utils';
+import NavigationService from '../../../services/navigation';
 
 function* addProduct({ id }) {
   const productExists = yield select(state =>
@@ -33,6 +34,8 @@ function* addProduct({ id }) {
     };
 
     yield put(addProductSuccess(data));
+
+    NavigationService.navigate('Cart');
   }
 }
 
