@@ -6,9 +6,9 @@ Site de vendas de tênis desenvolvido com ReactNative, redux e redux saga
 
 <table>
   <tr>
-    <td><img src="https://raw.githubusercontent.com/Domeniqque/rocketshoes-react-native/master/doc/home.png" width="250"/></td>
-    <td><img src="https://raw.githubusercontent.com/Domeniqque/rocketshoes-react-native/master/doc/home_alert.png" width="250"/></td>
-    <td><img src="https://raw.githubusercontent.com/Domeniqque/rocketshoes-react-native/master/doc/cart.png" width="250"/></td>
+    <td><img src="https://raw.githubusercontent.com/Domeniqque/rocketshoes-react-native/master/docs/home.png" width="250"/></td>
+    <td><img src="https://raw.githubusercontent.com/Domeniqque/rocketshoes-react-native/master/docs/home_alert.png" width="250"/></td>
+    <td><img src="https://raw.githubusercontent.com/Domeniqque/rocketshoes-react-native/master/docs/cart.png" width="250"/></td>
   </tr>
 </table>
 
