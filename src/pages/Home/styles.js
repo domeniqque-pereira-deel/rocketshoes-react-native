@@ -18,9 +18,10 @@ export const Product = styled.View`
   margin: 15px;
 `;
 
-export const ProductImage = styled.Image`
-  height: 220px;
-  width: 220px;
+export const ProductImage = styled.Image.attrs({
+  resizeMode: 'cover',
+})`
+  min-height: 220px;
 `;
 
 export const ProductTitle = styled.Text`
