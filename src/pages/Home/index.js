@@ -24,7 +24,7 @@ import * as CartActions from '../../store/modules/cart/actions';
 
 class Home extends Component {
   static propTypes = {
-    addToCart: PropTypes.func.isRequired,
+    addProductRequest: PropTypes.func.isRequired,
   };
 
   state = {
@@ -47,9 +47,9 @@ class Home extends Component {
   };
 
   handleAddToCart = product => {
-    const { addToCart } = this.props;
+    const { addProductRequest } = this.props;
 
-    addToCart(product);
+    addProductRequest(product.id);
   };
 
   renderProduct = ({ item }) => {
