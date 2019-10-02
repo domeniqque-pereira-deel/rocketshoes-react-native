@@ -25,6 +25,7 @@ import * as CartActions from '../../store/modules/cart/actions';
 class Home extends Component {
   static propTypes = {
     addProductRequest: PropTypes.func.isRequired,
+    amount: PropTypes.shape({}).isRequired,
   };
 
   state = {
@@ -53,6 +54,8 @@ class Home extends Component {
   };
 
   renderProduct = ({ item }) => {
+    const { amount } = this.props;
+
     return (
       <Product key={item.id}>
         <ProductImage source={{ uri: item.image }} />
@@ -62,7 +65,7 @@ class Home extends Component {
         <AddButton onPress={() => this.handleAddToCart(item)}>
           <ProductAmount>
             <Icon name="shopping-basket" color="#fff" size={14} />
-            <ProductAmountText>3</ProductAmountText>
+            <ProductAmountText>{amount[item.id] || 0}</ProductAmountText>
           </ProductAmount>
           <AddButtonText>ADICIONAR</AddButtonText>
         </AddButton>
@@ -86,10 +89,17 @@ class Home extends Component {
   }
 }
 
+const mapStateToProps = state => ({
+  amount: state.cart.reduce((amount, product) => {
+    amount[product.id] = product.amount;
+    return amount;
+  }, {}),
+});
+
 const mapDispatchToProps = dispatch =>
   bindActionCreators(CartActions, dispatch);
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(Home);
