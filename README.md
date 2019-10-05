@@ -2,7 +2,7 @@
 
 ## Bootcamp ReactNative Rocketseat
 
-Site de vendas de tênis desenvolvido com ReactNative, redux e redux saga
+A simple tennis ecommerce made with React Native, Redux and Redux Saga. For learning purposes.
 
 <table>
   <tr>
@@ -12,20 +12,22 @@ Site de vendas de tênis desenvolvido com ReactNative, redux e redux saga
   </tr>
 </table>
 
-### Fake API
+### Start Your Aplication
 
-Inicie a fake api, com `json-server`.
+The aplication consumes a API to list products. You can start an fake api with your `json-server`.
 
-Instale o `json-server` (instalação global: `yarn global add json-server` ou local `yarn add -D json-server`).
+Install `json-server`
 
-Depois execute a api que consome o arquivo `server.json` na raiz do projeto:
+> yarn add json-server -D
 
-> json-server server.json -p 3333 -w
+After, start your server to consume the file `db.json` in the project root:
 
-Depois, inicie a aplicação:
+> json-server db.json -p 3333 -w
 
-> yarn ios
+Copy `.env.example` file to `.env` file and install the dependencies:
 
-ou
+> `cp .env.example .env && yarn`
 
-> yarn android
+And run the project:
+
+> `yarn ios` or `yarn android`
